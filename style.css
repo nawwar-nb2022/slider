@@ -47,14 +47,27 @@ body{
 }
 .radioInput{
     display: flex;
-    gap: 20px;
-    margin-top: 1%;
+    justify-content: space-around;
+    min-width: 400px;
 }
 .button{
-    width: 10px;
-    height: 10px;
-    border: 1px solid lightgray;
-    border-radius: 50%;
     cursor: pointer;
     transition: .5s all ease-in-out;
+    width: 100px;
+    height: 100px;
+    margin-top: 1px;
+    background-color:transparent!important ;
+    margin-left:5px;
+    margin-top: 10px;
+}
+.button img{
+    width: 100px;
+    height: 100px;  
+    object-fit: cover;
+    border-radius: 10px;
+    /* opacity: .5; */
+    background-color :transparent
+}
+.focus_class{
+    opacity: 1;
 }

@@ -18,22 +18,30 @@ setInterval(()=>{
         x = 1
     }
     resetBtn()
-    buttons[x-1].style.backgroundColor= "white"
+    buttons[x-1].style.opacity=  "1"
 },5000)
 
 
 
-for (let i =0; i<len ; i++){
-    let dev = document.createElement('div');
-    dev.classList.add("button");
-    bottom.appendChild(dev);
-}
+// for (let i =0; i<len ; i++){
+//     let dev = document.createElement('div');
+//     dev.classList.add("button");
+//     bottom.appendChild(dev);
+// }
+image.forEach((e)=>{
+let d = document.createElement('div')
+let image = document.createElement('img')
+image.src = e.src 
+d.appendChild(image)
+d.classList.add("button")
+bottom.appendChild(d)
+})
 
 let buttons = document.querySelectorAll('.button')
 
 const resetBtn = ()=>{
     buttons.forEach(btn=>{
-        btn.style.background = "transparent";
+        btn.style.opacity = ".5"
     })
 }
 
@@ -42,7 +50,8 @@ buttons.forEach((btn,index) => {
         resetBtn()
         slider.style.transform = `translateX(-${(index)*400}px)`;
         x = index + 1 
-        btn.style.background = "white"
+        // btn.style.background = "white"
+        btn.style.opacity = "1"
 
     })
 });
@@ -60,7 +69,7 @@ left.addEventListener("click" , ()=>{
         console.log(ex);
     }
     resetBtn()
-    buttons[x-1].style.backgroundColor= "white"
+    // buttons[x-1].style.backgroundColor= "white"
 })
 right.addEventListener("click" , ()=>{
     if (x <len){
@@ -71,7 +80,8 @@ right.addEventListener("click" , ()=>{
         x = 1
     }
     resetBtn()
-    buttons[x-1].style.backgroundColor= "white"
+    // buttons[x-1].style.backgroundColor= "white"
+    buttons[x-1].style.opacity = "1"
 })
 
 
